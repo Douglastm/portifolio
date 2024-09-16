@@ -1,0 +1,57 @@
+header {
+    width: 1200px;
+    height: 80px;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 15px;
+    
+    display: grid;
+    grid-template-columns: 16.6% 1fr 18.3%;
+
+    background-color: #333;
+    
+    border: 1px solid #2AF598;
+    border-radius: 50px;
+
+    z-index: 1;
+}
+
+.header_tittle_link {
+    display: grid;
+    height: 80px;
+}
+
+.header_tittle {
+    justify-self: center;
+    align-self: center;
+
+    font-size: 30px;
+}
+
+header nav ul {
+    height: 80px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+header nav ul a {
+    margin: 0 16px;
+}
+
+header .header_teme {
+    height: 80px;
+
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+}
+
+header .header_teme p, input {
+    justify-self: center;
+    align-self: center;
+}

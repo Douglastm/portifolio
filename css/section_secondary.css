@@ -1,0 +1,41 @@
+.section__secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section__secondary-foto {
+    justify-self: center;
+    align-self: center;
+}
+
+.section__secondary-text {
+    align-self: center;
+}
+
+.section__secondary-foto, .section__secondary-text {
+    margin-top: 90px;
+}
+
+.section__secondary-text h2 {
+    font-size: 80px;
+}
+
+.section__secondary-text p {
+    width: 660px;
+    font-size: 20px;
+}
+
+.section__secondary-bnt_contct {
+    width: 200px;
+    height: 60px;
+
+    margin-top: 30px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-image: linear-gradient(#08AEEA, #2AF598);
+
+    font-size: 30px;
+    color: #111;
+}
