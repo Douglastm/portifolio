@@ -1,0 +1,18 @@
+footer {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer_title {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+footer div, p {
+    margin: 10px 0;
+}
