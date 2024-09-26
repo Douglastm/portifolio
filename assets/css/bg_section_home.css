@@ -7,6 +7,7 @@
 
     background-image: url(../img/BG.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .section__secondary {
@@ -18,7 +19,7 @@
 }
 
 .section__primary-decoration {
-    width: 3rem;
+    width: 4rem;
 
     align-self: center;
 }
@@ -62,13 +63,13 @@
 }
 
 .section__primary-foto {
-    width: 640px;
+    width: 460px;
 
     align-self: end;
 }
 
 .section__primary-icons {
-    justify-self: center;
+    justify-self: start;
     align-self: center;
 }
 
@@ -76,4 +77,25 @@
     display: grid;
 
     margin: 15px 0;
+}
+
+@media (max-width: 1024px) {
+    .text__content h1 {
+        width: 350px;
+    
+        font-size: 6rem;
+    }
+
+    .text__content-info {
+        width: 350px;
+    
+        display: flex;
+        align-items: center;
+    }
+
+    .section__primary-foto {
+        width: 50   0px;
+    
+        align-self: end;
+    }
 }

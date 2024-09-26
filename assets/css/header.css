@@ -8,9 +8,10 @@ header {
     transform: translateX(-50%);
 
     margin-top: 15px;
+    padding: 0 2rem;
     
     display: grid;
-    grid-template-columns: 16.6% 1fr 18.3%;
+    grid-template-columns: 15% 1fr 20%;
 
     background-color: #333;
     
@@ -29,7 +30,7 @@ header {
     justify-self: center;
     align-self: center;
 
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 header nav ul {
@@ -41,17 +42,49 @@ header nav ul {
 }
 
 header nav ul a {
-    margin: 0 16px;
+    margin: 0 1.6rem;
+
+    font-size: 1.8rem;
 }
 
 header .header_teme {
     height: 80px;
 
-    display: grid;
-    grid-template-columns: 60px 60px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__text-teme {
+    font-size: 1.6rem;
 }
 
 header .header_teme p, input {
     justify-self: center;
     align-self: center;
+}
+
+/* Responsive 1024px */
+@media (min-width: 1024px) {
+    header {
+        width: 900px;
+    }
+    
+    .header_tittle {
+        justify-self: center;
+        align-self: center;
+    
+        font-size: 2.5rem;
+    }
+    
+    header nav ul a {
+        margin: 0 1.2rem;
+    
+        font-size: 1.8rem;
+    }
+    
+    .header__text-teme {
+        font-size: 1.4rem;
+    }
 }
