@@ -1,5 +1,6 @@
 header {
-    width: 1200px;
+    width: 80%;
+    /* width: 1200px; */
     height: 80px;
 
     position: fixed;
@@ -8,7 +9,7 @@ header {
     transform: translateX(-50%);
 
     margin-top: 15px;
-    padding: 0 2rem;
+    padding: 0 3rem;
     
     display: grid;
     grid-template-columns: 15% 1fr 20%;
@@ -27,7 +28,7 @@ header {
 }
 
 .header_tittle {
-    justify-self: center;
+    /* justify-self: center; */
     align-self: center;
 
     font-size: 3rem;
@@ -51,7 +52,7 @@ header .header_teme {
     height: 80px;
 
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     gap: 1rem;
 }
@@ -66,7 +67,18 @@ header .header_teme p, input {
 }
 
 /* Responsive 1024px */
-@media (min-width: 1024px) {
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 15% 1fr;
+    }
+
+    header nav, .header_teme, .header__text-teme, .switch, .slider ,.round{
+        display: none;
+    }
+}
+
+/* @media (min-width: 1024px) {
     header {
         width: 900px;
     }
@@ -87,4 +99,4 @@ header .header_teme p, input {
     .header__text-teme {
         font-size: 1.4rem;
     }
-}
+} */
