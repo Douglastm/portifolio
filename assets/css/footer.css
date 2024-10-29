@@ -1,18 +1,17 @@
 footer {
     width: 100%;
-    height: auto;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-footer .footer_title {
-    font-size: 48px;
-    margin: 10px 0;
+.footer_link_icon {
+    width: 50px;
+
+    margin: 0 5px;
 }
 
-footer div, p {
+.footer_title, .footer_navbar, .footer_paragraph {
     margin: 10px 0;
 }

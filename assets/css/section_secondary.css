@@ -1,41 +1,109 @@
 .section__secondary {
+    width: 100%;
+    height: 100vh;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    background: #111;
 }
 
-.section__secondary-foto {
+.section__secondary_img {
+    width: 66%;
+    height: 66%;
+
     justify-self: center;
     align-self: center;
+
+    margin-left: 40px;
 }
 
-.section__secondary-text {
-    align-self: center;
+.section__secondary_texts {
+    display: grid;
+    grid-template-rows: 33% 40% 1fr;
 }
 
-.section__secondary-foto, .section__secondary-text {
-    margin-top: 90px;
+.section__secondary_title {
+    justify-self: start;
+    align-self: end;
+
+    font-size: 5vw;
 }
 
-.section__secondary-text h2 {
-    font-size: 80px;
+.section__secondary_paragraph {
+    width: 35vw;
+
+    justify-self: start;
+    align-self: start;
+
+    font-size: 1.2vw;
 }
 
-.section__secondary-text p {
-    width: 460px;
-    font-size: 20px;
-}
+.section__secondary_button {
+    width: 11vw;
+    height: 5vw;
 
-.section__secondary-bnt_contct {
-    width: 200px;
-    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-weight: 800;
 
-    border: none;
-    border-radius: 20px;
-
-    background-image: linear-gradient(#08AEEA, #2AF598);
-
-    font-size: 30px;
+    background-color: #DDD;
     color: #111;
+
+    border-radius: 1.5vw;
+}
+
+/* Responsividade */
+
+@media (max-width: 770px) {
+    .section__secondary {
+        grid-template-columns: none;
+    }
+
+    .section__secondary_img {
+        display: none;
+    }
+
+    .section__secondary_title {
+        justify-self: center;
+
+        font-size: 9vw;
+    }
+
+    .section__secondary_paragraph {
+        width: 80%;
+
+        margin: 0 auto;
+
+        font-size: 2.5vw;
+    }
+
+    .section__secondary_button {
+        width: 22vw;
+        height: 10vw;
+
+        justify-self: center;
+
+        font-size: 3vw;
+
+        border-radius: 3vw;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 430px) {
+    .section__secondary_paragraph {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 330px) {
+    .section__secondary_paragraph {
+        font-size: 3.9vw;
+    }
 }

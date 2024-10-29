@@ -1,0 +1,163 @@
+.section__fourth {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 30% 1fr;
+}
+
+.section__fourth_title {
+    justify-self: center;
+    align-self: end;
+
+    font-size: 6vw;
+}
+
+.section__fourth_project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section__fourth_img_project {
+    width: 400px;
+    height: 250px;
+
+    margin-right: 40px;
+
+    justify-self: end;
+    align-self: center;
+
+    border-radius: 2vw;
+}
+
+.section__fourth_img_project_info {
+    margin-left: 35px;
+
+    display: grid;
+    align-self: center;
+}
+
+.section__fourth_title_project {
+    font-size: 3vw;
+}
+
+.section__fourth_description_project {
+    width: 28vw;
+    height: 18vh;
+
+    font-size: 1.3vw;
+}
+
+.section__fourth_btns {
+    display: flex;
+    flex-direction: row;
+
+    gap: 15px;
+}
+
+.section__fourth_btn_code {
+    width: 150px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #333;
+
+    font-size: 18px;
+
+    border-radius: 15px;
+}
+
+.section__fourth_btn_view {
+    width: 150px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #333;
+
+    font-size: 18px;
+
+    border-radius: 15px;
+}
+
+@media (max-width: 770px) {
+    .section__fourth_project {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .section__fourth_img_project {
+        width: 400px;
+        height: 250px;
+    
+        margin: inherit;
+    
+        justify-self: center;
+        align-self: center;
+    
+        border-radius: 2vw;
+    }
+
+    .section__fourth_img_project_info {
+        display: grid;
+        align-self: start;
+
+        margin: inherit;
+    }
+
+    .section__fourth_title_project {
+        justify-self: center;
+        
+        font-size: 4vw;
+    }
+    
+    .section__fourth_description_project {
+        width: auto;
+        height: auto;
+        margin: 0 80px;
+
+        justify-self: center;
+    
+        font-size: 2vw;
+    }
+
+    .section__fourth_btns {
+        margin-top: 15px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+        gap: 15px;
+    }
+}
+
+@media (max-width: 430px) {
+    .section__fourth_title {
+        font-size: 14vw;
+    }
+
+    .section__fourth_img_project {
+        width: 300px;
+        height: 190px;
+    
+        margin: inherit;
+    
+        justify-self: center;
+        align-self: center;
+    
+        border-radius: 2vw;
+    }
+
+    .section__fourth_title_project {
+        justify-self: center;
+        
+        font-size: 9vw;
+    }
+}
