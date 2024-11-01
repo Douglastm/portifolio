@@ -37,6 +37,11 @@
     border-radius: 20px;
 }
 
+.section__third_icon {
+    width: 60px;
+    height: 60px;
+}
+
 /* Responsive */
 
 @media (max-width: 1020px) {
