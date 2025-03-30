@@ -17,7 +17,7 @@ const LinkStyle = styled.a`
     &:after {
         content: "";
         position: absolute;
-        background-color: #2AF598;
+        background-color: var(--green-color);
         height: 2px;
         width: 0;
         left: 0;
@@ -27,6 +27,21 @@ const LinkStyle = styled.a`
 
     &:hover:after {
         width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        margin: 0;
+        padding: 50px;
+
+        justify-self: center;
+
+        &:after {
+            display: none;
+        }
+
+        &:hover:after {
+            display: none;
+        }
     }
 `;
 
