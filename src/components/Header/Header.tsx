@@ -8,7 +8,6 @@ import {
   User,
   FolderGit2,
   Mail,
-  Settings,
   Menu,
   X,
 } from "lucide-react";
