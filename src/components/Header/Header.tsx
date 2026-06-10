@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import Logo from "../../assets/images/Logo.png";
+import MenuModal from "../MenuModal";
 
 // import MenuModal from "../MenuModal/MenuModal";
 
@@ -94,14 +95,14 @@ export default function Header() {
       </header>
 
       {/* Modal Mobile */}
-      {/*
+      
       {isMenuOpen && (
         <MenuModal
           items={navItems}
           onClose={() => setIsMenuOpen(false)}
         />
       )}
-      */}
+     
     </>
   );
 }

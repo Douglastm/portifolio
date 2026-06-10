@@ -1,0 +1,83 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  top: 82px;
+
+  background: var(--background);
+  z-index: 999;
+  
+  padding: 0 3rem;
+
+  /* Mobile-first: começa oculto */
+  display: none;
+}
+
+.modal {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+/* =========================
+   GRID
+   ========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* =========================
+   ITEM
+   ========================= */
+
+.item {
+  width: 100px;
+  height: 100px;
+
+  justify-self: center;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+
+  padding: 1.25rem;
+  border-radius: 1rem;
+
+  border: 2px solid var(--accent);
+  background: var(--background);
+
+  text-decoration: none;
+  color: var(--text-primary);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.label {
+  font-family: var(--font-base);
+}
+
+.item:hover {
+  background: var(--surface);
+}
+
+/* =========================
+   MOBILE VISIBILITY
+   ========================= */
+
+@media (max-width: 767px) {
+  .overlay {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .overlay {
+    display: none;
+  }
+}
