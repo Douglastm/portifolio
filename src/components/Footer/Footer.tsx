@@ -1,6 +1,7 @@
 import styles from "./Footer.module.css";
 
 import { Link, useLocation } from "react-router-dom";
+import { Mail } from "lucide-react";
 
 import { FaLinkedin, FaGithubSquare, FaInstagramSquare } from "react-icons/fa";
 
@@ -51,7 +52,10 @@ export default function Footer() {
                             </a>
                         </div>
                         <div className={styles.button_container}>
-                            <Link to="/contact" className={styles.button}>Contate-me</Link>
+                            <Link to="/contact" className={styles.button}>
+                                <Mail size={18} />
+                                <span>Contate-me</span>
+                            </Link>
                         </div>
                     </div>
                     <div className={styles.links_container}>

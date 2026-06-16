@@ -60,15 +60,25 @@
 }
 
 .button {
-    padding: 8px 24px;
-    border: 2px solid #111;
-    border-radius: 16px;
-
-    transition: .2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 22px;
+    border: 1px solid #d8d8d8;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #111111;
+    font-size: 0.98rem;
+    font-weight: 600;
+    transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, color 180ms ease;
 }
 
 .button:hover {
-    scale: 1.05;
+    transform: translateY(-2px);
+    border-color: #111111;
+    background: #f7f7f7;
 }
 
 .links_container {
