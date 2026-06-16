@@ -1,0 +1,31 @@
+.container {
+    width: fit-content;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    padding: .4rem .6rem;
+
+    background-color: var(--surface);
+    border-radius: 1rem;
+    border: 1px solid var(--surface);
+    
+    cursor: default;
+
+    transition: .5s ease-in-out;
+}
+
+.container:hover {
+    border: 1px solid #000;
+}
+
+.icon {
+    width: 1.2rem;
+}
+
+.label {
+    font-size: .8rem;
+}

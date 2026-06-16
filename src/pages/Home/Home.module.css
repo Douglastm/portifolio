@@ -1,0 +1,308 @@
+.content {
+  width: 100%;
+  min-height: 92vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  max-width: 1000px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  gap: 24px;
+}
+
+.info {
+  padding: 32px;
+}
+
+.tags_container {
+  display: flex;
+  gap: 16px;
+}
+
+.text_presentation {
+  font-size: clamp(1.8rem, 6vw, 2rem);
+}
+
+.hand_wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave-hand 2.5s ease-in-out infinite;
+}
+
+.title_container {
+  max-width: 100%;
+  width: 100%;
+}
+
+.title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  width: 100%;
+  line-height: 0.95;
+}
+
+.title_line {
+  display: block;
+  width: 100%;
+}
+
+.paragraph {
+  max-width: 52ch;
+  width: 100%;
+  font-size: clamp(1rem, 2.8vw, 1.1rem);
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button_primary {
+  background: #111111;
+  color: #fefefe;
+  box-shadow: 0 14px 30px rgba(17, 17, 17, 0.18);
+}
+
+.button_primary:hover {
+  background: #222222;
+  box-shadow: 0 18px 34px rgba(17, 17, 17, 0.24);
+}
+
+.button_secondary {
+  background: #ffffff;
+  color: #111111;
+  border-color: #d8d8d8;
+}
+
+.button_secondary:hover {
+  border-color: #111111;
+  background: #f7f7f7;
+}
+
+.social_section {
+  margin-top: 32px;
+}
+
+.social_title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.social_links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social_link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #d8d8d8;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #111111;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.social_link:hover {
+  transform: translateY(-2px);
+  border-color: #111111;
+  background: #f7f7f7;
+}
+
+.social_icon {
+  font-size: 1.8rem;
+}
+
+.photo_content {
+  width: 100%;
+  max-width: 420px;
+  justify-self: center;
+  align-self: center;
+
+  padding: 28px;
+}
+
+.profile_photo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+@keyframes wave-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    grid-template: auto auto / 1fr;
+    gap: 12px;
+  }
+
+  .info {
+    padding: 24px;
+  }
+
+  .photo_content {
+    max-width: 360px;
+    padding: 0 24px 24px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .content {
+    min-height: auto;
+    padding: 32px 0 40px;
+  }
+
+  .section {
+    max-width: 720px;
+  }
+
+  .info {
+    padding: 24px 32px 8px;
+  }
+
+  .tags_container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .text_presentation {
+    font-size: 1.65rem;
+  }
+
+  .title {
+    font-size: clamp(3rem, 7vw, 3.75rem);
+    line-height: 0.98;
+  }
+
+  .paragraph {
+    max-width: 44ch;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  .actions {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .button {
+    min-width: 180px;
+    padding: 0 20px;
+  }
+
+  .social_section {
+    margin-top: 28px;
+  }
+
+  .photo_content {
+    max-width: 420px;
+    padding: 0 32px 8px;
+  }
+
+  .profile_photo {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .info {
+    padding: 20px 16px;
+  }
+
+  .tags_container {
+    flex-wrap: wrap;
+  }
+
+  .title {
+    font-size: clamp(2.25rem, 12vw, 3.5rem);
+  }
+
+  .paragraph {
+    max-width: 100%;
+    margin-top: 12px;
+  }
+
+  .actions {
+    margin-top: 24px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .social_section {
+    margin-top: 24px;
+  }
+
+  .social_links {
+    flex-wrap: wrap;
+  }
+
+  .photo_content {
+    max-width: 100%;
+    padding: 0 16px 16px;
+  }
+
+  .profile_photo {
+    border-radius: 16px;
+  }
+}
