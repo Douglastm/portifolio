@@ -3,19 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 
 import styles from "./Header.module.css";
 
-import {
-  Home,
-  User,
-  FolderGit2,
-  Mail,
-  Menu,
-  X,
-} from "lucide-react";
+import { Home, User, FolderGit2, Mail, Menu, X } from "lucide-react";
 
 import Logo from "../../assets/images/Logo.png";
 import MenuModal from "../MenuModal";
-
-// import MenuModal from "../MenuModal/MenuModal";
 
 export default function Header() {
   const location = useLocation();
@@ -34,16 +25,9 @@ export default function Header() {
         <div className={styles.container}>
           {/* Logo */}
           <div className={styles.logo}>
-            <img
-              src={Logo}
-              alt="Logo"
-              width={50}
-              height={50}
-            />
+            <img src={Logo} alt="Logo" width={50} height={50} />
 
-            <span className={styles.logoName}>
-              Douglas
-            </span>
+            <span className={styles.logoName}>Douglas</span>
           </div>
 
           {/* Menu Desktop */}
@@ -60,11 +44,8 @@ export default function Header() {
                   }`}
                 >
                   <Icon size={22} />
-
                   <span
-                    className={`${styles.label} ${
-                      isActive ? styles.show : ""
-                    }`}
+                    className={`${styles.label} ${isActive ? styles.show : ""}`}
                   >
                     {label}
                   </span>
@@ -79,11 +60,7 @@ export default function Header() {
               isMenuOpen ? styles.menuButtonOpen : ""
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={
-              isMenuOpen
-                ? "Fechar menu"
-                : "Abrir menu"
-            }
+            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
             {isMenuOpen ? (
               <X className={styles.icon_menu} />
@@ -95,14 +72,10 @@ export default function Header() {
       </header>
 
       {/* Modal Mobile */}
-      
+
       {isMenuOpen && (
-        <MenuModal
-          items={navItems}
-          onClose={() => setIsMenuOpen(false)}
-        />
+        <MenuModal items={navItems} onClose={() => setIsMenuOpen(false)} />
       )}
-     
     </>
   );
 }
