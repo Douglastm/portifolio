@@ -1,0 +1,416 @@
+.content {
+  width: 100%;
+  min-height: 92vh;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  width: 100%;
+  max-width: 1000px;
+  padding: 48px 32px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  gap: 24px;
+  padding: 36px;
+  border: 1px solid var(--surface);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(17, 17, 17, 0.06), transparent 30%),
+    linear-gradient(135deg, #ffffff 0%, #fafafa 58%, #f2f2f2 100%);
+}
+
+.eyebrow,
+.sectionKicker {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6d6d6d;
+}
+
+.title {
+  margin-top: 14px;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.titleAccent {
+  color: #6c6c6c;
+}
+
+.description {
+  max-width: 57ch;
+  margin-top: 18px;
+  font-size: clamp(1rem, 2.4vw, 1.08rem);
+  line-height: 1.7;
+  color: #4f4f4f;
+}
+
+.heroStats {
+  display: grid;
+  gap: 14px;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.statCard strong {
+  font-size: 1.2rem;
+}
+
+.statCard span {
+  color: #666666;
+  line-height: 1.5;
+}
+
+.projectsHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sectionTitle {
+  margin-top: 8px;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  line-height: 1.1;
+}
+
+.inlineLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.comingSoonCard {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 32px;
+  border: 1px solid var(--surface);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top left, rgb(17 17 17 / 0.04), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #f7f7f7 58%, #f1f1f1 100%);
+}
+
+.comingSoonBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 82%);
+  border: 1px solid #e4e4e4;
+}
+
+.comingSoonTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.1;
+}
+
+.comingSoonText {
+  max-width: 60ch;
+  line-height: 1.7;
+  color: #5e5e5e;
+}
+
+.projectCard {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 28px;
+  min-height: 280px;
+  padding: 28px;
+  border-radius: 30px;
+  border: 1px solid var(--surface);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 36px rgb(17 17 17 / 10%);
+}
+
+.projectCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+.projectBackground {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+}
+
+.projectCardDark {
+  grid-column: span 7;
+  background: #111111;
+  color: #fefefe;
+}
+
+.projectCardLight {
+  grid-column: span 5;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+}
+
+.projectCardGrid {
+  grid-column: span 12;
+  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+}
+
+.projectVisualOps {
+  background:
+    linear-gradient(180deg, rgb(17 17 17 / 18%) 0%, rgb(17 17 17 / 78%) 100%),
+    radial-gradient(circle at top right, rgb(255 255 255 / 20%), transparent 26%),
+    linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 45%, #0f0f0f 100%);
+}
+
+.projectVisualPortfolio {
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 76%) 100%),
+    radial-gradient(circle at top left, rgb(17 17 17 / 10%), transparent 32%),
+    linear-gradient(135deg, #ffffff 0%, #ececec 52%, #f7f7f7 100%);
+}
+
+.projectVisualApi {
+  background:
+    linear-gradient(rgb(234 234 234 / 1) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(234 234 234 / 1) 1px, transparent 1px),
+    radial-gradient(circle at top right, rgb(17 17 17 / 8%), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+  background-size: 26px 26px, 26px 26px, 100% 100%, 100% 100%;
+}
+
+.projectTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.projectBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.projectCardLight .projectBadge,
+.projectCardGrid .projectBadge {
+  background: rgb(255 255 255 / 82%);
+  backdrop-filter: blur(8px);
+}
+
+.projectStatus {
+  font-size: 0.85rem;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.projectTitle {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  line-height: 1.08;
+}
+
+.projectDescription {
+  max-width: 52ch;
+  margin-top: 12px;
+  line-height: 1.7;
+  color: inherit;
+  opacity: 0.86;
+}
+
+.stackList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stackPill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  font-size: 0.92rem;
+}
+
+.projectCardLight .stackPill,
+.projectCardGrid .stackPill {
+  border-color: #dfdfdf;
+  background: rgb(255 255 255 / 85%);
+  backdrop-filter: blur(8px);
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 24px;
+}
+
+.panel {
+  padding: 28px;
+  border: 1px solid var(--surface);
+  border-radius: 28px;
+  background: #ffffff;
+}
+
+.capabilityList,
+.typeList {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.capabilityItem,
+.typeItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.capabilityIcon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #f2f2f2;
+}
+
+.capabilityTitle {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.capabilityText,
+.typeItem p,
+.ctaText {
+  margin-top: 6px;
+  line-height: 1.7;
+  color: #5e5e5e;
+}
+
+.sideColumn {
+  display: grid;
+  gap: 24px;
+}
+
+.typeItem strong {
+  line-height: 1.3;
+}
+
+.ctaPanel {
+  background: linear-gradient(180deg, #111111 0%, #1b1b1b 100%);
+  color: #fefefe;
+}
+
+.ctaTitle {
+  margin-top: 8px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.12;
+}
+
+.ctaText {
+  color: rgba(254, 254, 254, 0.78);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  margin-top: 24px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #fefefe;
+  color: #111111;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 36px 24px 56px;
+  }
+
+  .hero,
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectCardDark,
+  .projectCardLight,
+  .projectCardGrid {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 24px 16px 40px;
+    gap: 24px;
+  }
+
+  .hero,
+  .panel,
+  .projectCard,
+  .comingSoonCard {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  .projectsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projectCard {
+    min-height: unset;
+    gap: 20px;
+  }
+}
