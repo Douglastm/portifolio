@@ -15,8 +15,8 @@ const contactLinks = [
   {
     icon: <Mail size={20} />,
     label: "Email",
-    value: "douglastmagalhaes.dev@gmail.com",
-    href: "mailto:douglastmagalhaes.dev@gmail.com",
+    value: "douglasteixeiramagalhaes@gmail.com",
+    href: "mailto:douglasteixeiramagalhaes@gmail.com",
     description: "Para propostas, freelas e oportunidades de trabalho.",
   },
   {
@@ -157,7 +157,7 @@ export default function Contact() {
                 produto.
               </p>
               <a
-                href="mailto:douglastmagalhaes.dev@gmail.com?subject=Vamos%20conversar"
+                href="mailto:douglasteixeiramagalhaes@gmail.com?subject=Vamos%20conversar"
                 className={styles.availabilityLink}
               >
                 Iniciar conversa
