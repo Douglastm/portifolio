@@ -30,8 +30,12 @@ export default function ExperienceModal({
 
     window.addEventListener("keydown", handleEscape);
 
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
+
     return () => {
       window.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = overflow;
     };
   }, [onClose]);
 
