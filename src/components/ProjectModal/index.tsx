@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 import styles from "./ProjectModal.module.css";
 
@@ -13,6 +14,7 @@ export type ProjectDetails = {
   year: string;
   role: string;
   backgroundClassName: string;
+  image: string;
   summary: string;
   challenge: string;
   solution: string;
@@ -42,8 +44,12 @@ export default function ProjectModal({
 
     window.addEventListener("keydown", handleEscape);
 
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
+
     return () => {
       window.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = overflow;
     };
   }, [onClose]);
 
@@ -66,6 +72,7 @@ export default function ProjectModal({
         </button>
 
         <div className={`${styles.visual} ${project.backgroundClassName}`}>
+          <img src={project.image} alt="" className={styles.visualImage} />
           <div className={styles.visualBadge}>{project.category}</div>
           <div className={styles.visualMeta}>
             <span>{project.status}</span>
@@ -126,6 +133,7 @@ export default function ProjectModal({
               rel={href.startsWith("http") ? "noreferrer" : undefined}
               className={styles.actionLink}
             >
+              {href.includes("github.com") && <FaGithub size={18} />}
               <span>{label}</span>
               <ArrowUpRight size={18} />
             </a>

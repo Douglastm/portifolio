@@ -143,14 +143,11 @@
 
 .projectCard {
   position: relative;
+  grid-column: span 6;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: stretch;
-  gap: 28px;
-  min-height: 280px;
-  padding: 28px;
   border-radius: 30px;
   border: 1px solid var(--surface);
   text-align: left;
@@ -166,31 +163,37 @@
   box-shadow: 0 22px 36px rgb(17 17 17 / 10%);
 }
 
-.projectCard > * {
+.projectMedia {
   position: relative;
-  z-index: 1;
-}
-
-.projectBackground {
-  position: absolute;
-  inset: 0;
-  opacity: 1;
-}
-
-.projectCardDark {
-  grid-column: span 7;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
   background: #111111;
   color: #fefefe;
 }
 
-.projectCardLight {
-  grid-column: span 5;
-  background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+.projectMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(17 17 17 / 55%) 0%, rgb(17 17 17 / 0%) 45%);
 }
 
-.projectCardGrid {
-  grid-column: span 12;
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+.projectPhoto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projectBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 28px 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
 }
 
 .projectVisualOps {
@@ -217,6 +220,9 @@
 }
 
 .projectTop {
+  position: absolute;
+  inset: 16px 16px auto;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -230,30 +236,24 @@
   min-height: 38px;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.projectCardLight .projectBadge,
-.projectCardGrid .projectBadge {
-  background: rgb(255 255 255 / 82%);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  background: rgb(255 255 255 / 14%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .projectStatus {
   font-size: 0.85rem;
+  font-weight: 500;
   color: inherit;
-  opacity: 0.75;
 }
 
 .projectTitle {
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  line-height: 1.08;
+  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  line-height: 1.1;
 }
 
 .projectDescription {
   max-width: 52ch;
-  margin-top: 12px;
   line-height: 1.7;
   color: inherit;
   opacity: 0.86;
@@ -270,17 +270,10 @@
   align-items: center;
   min-height: 36px;
   padding: 0 12px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid #dfdfdf;
+  background: #f4f4f4;
   border-radius: 999px;
   font-size: 0.92rem;
-}
-
-.projectCardLight .stackPill,
-.projectCardGrid .stackPill {
-  border-color: #dfdfdf;
-  background: rgb(255 255 255 / 85%);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
 }
 
 .bottomGrid {
@@ -385,9 +378,7 @@
     grid-template-columns: 1fr;
   }
 
-  .projectCardDark,
-  .projectCardLight,
-  .projectCardGrid {
+  .projectCard {
     grid-column: auto;
   }
 }
@@ -400,19 +391,21 @@
 
   .hero,
   .panel,
-  .projectCard,
   .comingSoonCard {
     padding: 24px 20px;
     border-radius: 24px;
   }
 
+  .projectCard {
+    border-radius: 24px;
+  }
+
+  .projectBody {
+    padding: 20px;
+  }
+
   .projectsHeader {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .projectCard {
-    min-height: unset;
-    gap: 20px;
   }
 }

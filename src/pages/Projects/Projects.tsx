@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
@@ -5,12 +6,77 @@ import {
   Code2,
   Layers3,
   Mail,
+  Monitor,
   Rocket,
+  Server,
   ShieldCheck,
   Smartphone,
 } from "lucide-react";
 
 import styles from "./Projects.module.css";
+import ProjectModal, { type ProjectDetails } from "../../components/ProjectModal";
+
+const FrontendProjectImage = "/Frontend_project.png";
+const BackendProjectImage = "/Backend_project.png";
+
+const projects: ProjectDetails[] = [
+  {
+    icon: Monitor,
+    category: "Frontend",
+    title: "Sales System — Frontend",
+    description:
+      "Interface web para gestão comercial: clientes, produtos, categorias, usuários, vendas e formas de pagamento.",
+    stack: ["React 19", "TypeScript", "Vite", "React Router DOM", "Axios", "CSS Modules", "React Icons"],
+    status: "Concluído",
+    year: "2026",
+    role: "Front-end Developer",
+    backgroundClassName: styles.projectVisualOps,
+    image: FrontendProjectImage,
+    summary:
+      "Interface web do Sales System, um sistema de gestão comercial desenvolvido para gerenciamento de clientes, produtos, categorias, usuários, vendas e métodos de pagamento. Construída em React, TypeScript e Vite, consumindo uma API REST em Java Spring Boot.",
+    challenge:
+      "Organizar múltiplos domínios de negócio (clientes, produtos, categorias, vendas, pagamentos e usuários) em uma única aplicação mantendo navegação clara, formulários consistentes e uma comunicação confiável com a API autenticada por JWT.",
+    solution:
+      "Estruturação da aplicação em módulos por domínio, camada de serviços com Axios para centralizar as chamadas à API, rotas protegidas com React Router DOM e componentização com CSS Modules para manter consistência visual entre as telas.",
+    highlights: [
+      "CRUD completo de clientes, produtos, categorias, usuários e formas de pagamento.",
+      "Fluxo de vendas integrado à API REST com autenticação via JWT.",
+      "Camada de serviços com Axios para centralizar a comunicação com o back-end.",
+      "Interface construída com React 19, TypeScript e Vite.",
+    ],
+    links: [
+      { label: "Ver repositório", href: "https://github.com/Douglastm/Sales-System-Frontend" },
+    ],
+  },
+  {
+    icon: Server,
+    category: "Backend",
+    title: "Sales System — API",
+    description:
+      "API REST em Spring Boot para vendas, clientes, produtos, categorias e formas de pagamento, com autenticação via JWT.",
+    stack: ["Java 21", "Spring Boot 4", "PostgreSQL", "JWT", "springdoc-openapi", "Lombok", "JUnit 5 + Mockito"],
+    status: "Concluído",
+    year: "2026",
+    role: "Back-end Developer",
+    backgroundClassName: styles.projectVisualApi,
+    image: BackendProjectImage,
+    summary:
+      "API REST desenvolvida com Spring Boot para gerenciamento de vendas, clientes, produtos, categorias, formas de pagamento e usuários, com autenticação e autorização via JWT.",
+    challenge:
+      "Modelar um domínio de vendas com múltiplas entidades relacionadas (clientes, produtos, categorias, pagamentos) garantindo autenticação segura, validação consistente dos dados e uma API documentada e testável.",
+    solution:
+      "Camadas bem definidas com Spring Web, Spring Data JPA e Bean Validation, autenticação e autorização via Spring Security com JWT, persistência em PostgreSQL, documentação automática com springdoc-openapi (Swagger UI) e cobertura de testes com JUnit 5 e Mockito.",
+    highlights: [
+      "Autenticação e autorização via JWT com Spring Security.",
+      "Persistência em PostgreSQL com Spring Data JPA.",
+      "Documentação interativa da API com Swagger UI (springdoc-openapi).",
+      "Testes unitários e de integração com JUnit 5 e Mockito.",
+    ],
+    links: [
+      { label: "Ver repositório", href: "https://github.com/Douglastm/Sales-System" },
+    ],
+  },
+];
 
 const capabilities = [
   {
@@ -49,6 +115,10 @@ const projectTypes = [
 ];
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState<ProjectDetails | null>(
+    null
+  );
+
   return (
     <div className={styles.content}>
       <section className={styles.section}>
@@ -84,8 +154,8 @@ export default function Projects() {
 
         <div className={styles.projectsHeader}>
           <div>
-            <span className={styles.sectionKicker}>Em breve</span>
-            <h2 className={styles.sectionTitle}>Projetos em preparação</h2>
+            <span className={styles.sectionKicker}>Projetos</span>
+            <h2 className={styles.sectionTitle}>Sales System</h2>
           </div>
           <Link to="/contact" className={styles.inlineLink}>
             Conversar sobre um projeto
@@ -93,19 +163,52 @@ export default function Projects() {
           </Link>
         </div>
 
-        {/* Cards de projetos ocultos temporariamente até a publicação dos cases. */}
-        {/* <div className={styles.projectsGrid}>...</div> */}
+        <div className={styles.projectsGrid}>
+          {projects.map((project) => {
+            const Icon = project.icon;
+            return (
+              <button
+                key={project.title}
+                type="button"
+                className={styles.projectCard}
+                onClick={() => setSelectedProject(project)}
+              >
+                <div className={styles.projectMedia}>
+                  <img src={project.image} alt="" className={styles.projectPhoto} />
+                  <div className={styles.projectTop}>
+                    <span className={styles.projectBadge}>
+                      <Icon size={16} />
+                      <span>{project.category}</span>
+                    </span>
+                    <span className={styles.projectStatus}>{project.status}</span>
+                  </div>
+                </div>
+                <div className={styles.projectBody}>
+                  <h3 className={styles.projectTitle}>{project.title}</h3>
+                  <p className={styles.projectDescription}>{project.description}</p>
+                  <div className={styles.stackList}>
+                    {project.stack.slice(0, 4).map((item) => (
+                      <span key={item} className={styles.stackPill}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
 
         <div className={styles.comingSoonCard}>
           <div className={styles.comingSoonBadge}>
             <Rocket size={18} />
-            <span>Projetos em breve</span>
+            <span>Mais projetos em breve</span>
           </div>
           <h3 className={styles.comingSoonTitle}>
             Estou organizando os próximos cases para publicar aqui.
           </h3>
           <p className={styles.comingSoonText}>
-            Em breve esta seção terá projetos com mais contexto, decisões
+            Em breve esta seção terá novos projetos com mais contexto, decisões
             técnicas, resultados e detalhes de implementação.
           </p>
         </div>
@@ -164,6 +267,12 @@ export default function Projects() {
         </div>
       </section>
 
+      {selectedProject ? (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      ) : null}
     </div>
   );
 }
