@@ -9,6 +9,7 @@
   border-radius: 20px;
   background: var(--background);
   text-align: left;
+  touch-action: manipulation;
   transition:
     border-color 0.2s ease,
     background 0.2s ease,
