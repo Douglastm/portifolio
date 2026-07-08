@@ -24,11 +24,11 @@ export default function Header() {
       <header className={styles.header}>
         <div className={styles.container}>
           {/* Logo */}
-          <div className={styles.logo}>
+          <Link to="/" className={styles.logo}>
             <img src={Logo} alt="Logo" width={50} height={50} />
 
             <span className={styles.logoName}>Douglas</span>
-          </div>
+          </Link>
 
           {/* Menu Desktop */}
           <nav className={styles.actions}>
