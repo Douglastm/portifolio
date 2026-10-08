@@ -81,36 +81,36 @@ const projects: ProjectDetails[] = [
 const capabilities = [
   {
     icon: Layers3,
-    title: "Interfaces com intenção",
-    text: "Telas que equilibram estética, legibilidade e conversão sem cair em layout genérico.",
+    title: "Visão de produto",
+    text: "Interfaces que equilibram necessidades do negócio, experiência de uso e clareza visual.",
   },
   {
     icon: Code2,
-    title: "Código organizado",
-    text: "Componentização, consistência visual e atenção a manutenção desde a primeira entrega.",
+    title: "Código sustentável",
+    text: "Componentização, consistência e preocupação com manutenção e evolução contínua.",
   },
   {
     icon: ShieldCheck,
-    title: "Base sólida de produto",
-    text: "Fluxos com foco em estabilidade, clareza técnica e evolução contínua do projeto.",
+    title: "Colaboração técnica",
+    text: "Comunicação clara, atenção aos detalhes e disposição para aprender com o time.",
   },
 ];
 
 const projectTypes = [
   {
     icon: Rocket,
-    label: "Landing pages",
-    description: "Páginas rápidas, diretas e pensadas para gerar ação.",
+    label: "Produtos digitais",
+    description: "Construção e evolução de aplicações web orientadas a necessidades reais.",
   },
   {
     icon: Blocks,
     label: "Sistemas web",
-    description: "Dashboards, áreas autenticadas e interfaces para operação.",
+    description: "Interfaces, dashboards e fluxos autenticados para apoiar operações.",
   },
   {
     icon: Smartphone,
-    label: "Experiências responsivas",
-    description: "Layouts que funcionam bem no desktop e no mobile.",
+    label: "APIs e integrações",
+    description: "Serviços bem estruturados, integrações REST e dados confiáveis.",
   },
 ];
 
@@ -126,13 +126,13 @@ export default function Projects() {
           <div className={styles.heroCopy}>
             <span className={styles.eyebrow}>Projetos</span>
             <h1 className={styles.title}>
-              Trabalho em produtos digitais com
-              <span className={styles.titleAccent}> forma, lógica e impacto.</span>
+              Desenvolvimento de software com
+              <span className={styles.titleAccent}> qualidade, colaboração e propósito.</span>
             </h1>
             <p className={styles.description}>
-              Minha atuação combina front-end, back-end e visão de produto para
-              transformar ideias em experiências objetivas, utilizáveis e bem
-              construídas.
+              Busco uma oportunidade para contribuir com times de tecnologia,
+              aplicando conhecimentos em front-end, back-end e produtos digitais
+              enquanto evoluo junto com a equipe.
             </p>
           </div>
 
@@ -158,7 +158,7 @@ export default function Projects() {
             <h2 className={styles.sectionTitle}>Sales System</h2>
           </div>
           <Link to="/contact" className={styles.inlineLink}>
-            Conversar sobre um projeto
+            Conversar sobre uma oportunidade
             <ArrowUpRight size={18} />
           </Link>
         </div>
@@ -234,7 +234,7 @@ export default function Projects() {
 
           <div className={styles.sideColumn}>
             <div className={styles.panel}>
-              <span className={styles.sectionKicker}>O que eu entrego</span>
+              <span className={styles.sectionKicker}>Áreas de interesse</span>
               <div className={styles.typeList}>
                 {projectTypes.map(({ icon: Icon, label, description }) => (
                   <div key={label} className={styles.typeItem}>
@@ -250,17 +250,17 @@ export default function Projects() {
 
             <div className={`${styles.panel} ${styles.ctaPanel}`}>
               <span className={styles.sectionKicker}>Próximo passo</span>
-              <h2 className={styles.ctaTitle}>Se quiser, o próximo projeto pode entrar aqui.</h2>
+              <h2 className={styles.ctaTitle}>Vamos conversar sobre como posso contribuir com seu time.</h2>
               <p className={styles.ctaText}>
-                Estou disponível para construir interfaces, APIs e experiências
-                digitais com foco real em entrega.
+                Estou em busca de uma oportunidade para desenvolver software,
+                colaborar em produtos digitais e crescer em um ambiente técnico.
               </p>
               <a
-                href="mailto:douglastmagalhaes.dev@gmail.com?subject=Novo%20projeto"
+                href="mailto:douglastmagalhaes.dev@gmail.com?subject=Oportunidade%20profissional"
                 className={styles.ctaButton}
               >
                 <Mail size={18} />
-                <span>Falar sobre projeto</span>
+                <span>Falar sobre uma oportunidade</span>
               </a>
             </div>
           </div>

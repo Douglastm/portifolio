@@ -11,7 +11,7 @@ import ExperienceModal, {
 const experiences: ExperienceDetails[] = [
   {
     startDate: "03/2025",
-    endDate: "Atualmente",
+    endDate: "07/2026",
     company: "TOTVS",
     role: "Analista de suporte.",
     summary:
@@ -73,16 +73,21 @@ export default function About() {
           </div>
           <div className={styles.presentation}>
             <p className={styles.text_presentation}>
-              Sou Analista de Suporte na TOTVS e estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e desenvolvimento de software. Atuo há mais de 1 ano na análise e resolução de incidentes, investigação de integrações, identificação de causa raiz e suporte técnico para sistemas corporativos.
+              Sou Desenvolvedor Full Stack e estudante de Análise e Desenvolvimento de Sistemas, com mais de 4 anos de experiência prática em desenvolvimento de software. Tenho foco principalmente em Java, Spring Boot, APIs REST, React e TypeScript, buscando construir aplicações organizadas, escaláveis e com boas práticas de desenvolvimento.
               <br />
               <br />
-              Estudo desenvolvimento de software há mais de 4 anos, construindo projetos web e mobile com foco em qualidade, escalabilidade e boas práticas. Possuo experiência no desenvolvimento de APIs REST utilizando Java, Spring Boot, PostgreSQL, MySQL e Docker, além da criação de interfaces modernas com React, Next.js, JavaScript e TypeScript.
+              Possuo experiência no desenvolvimento de APIs e sistemas web, trabalhando com Java, Spring Boot, PostgreSQL, MySQL, Docker e autenticação utilizando JWT. No frontend, desenvolvo interfaces modernas utilizando React, Next.js, JavaScript e TypeScript, além de possuir experiência com React Native para aplicações mobile.
               <br />
               <br />
-              Também tenho experiência com React Native, integração de APIs, versionamento com Git, documentação de sistemas e deploy em ambientes cloud. Minha vivência em suporte e desenvolvimento me proporciona uma visão completa dos processos, permitindo compreender problemas de negócio e transformá-los em soluções eficientes.
+              Minha experiência profissional também me proporcionou uma forte capacidade de análise e resolução de problemas, investigação de falhas, identificação de causa raiz, integração entre sistemas e compreensão de regras de negócio. Essa combinação entre desenvolvimento e suporte me permite enxergar não apenas o código, mas também o problema que a aplicação precisa resolver.
               <br />
               <br />
-              Estou sempre em busca de novos desafios, aprendizado contínuo e oportunidades para evoluir como desenvolvedor Full Stack, contribuindo com projetos que gerem impacto real para empresas e usuários.
+              Tenho experiência com Git, documentação, integração de APIs, bancos de dados e deploy em ambientes cloud, além de estar constantemente desenvolvendo projetos próprios para aprimorar meus conhecimentos e transformar aprendizado em aplicações reais.
+              <br />
+              <br />
+              Atualmente, busco novas oportunidades como Desenvolvedor Java / Full Stack, onde possa aplicar meus conhecimentos, continuar evoluindo tecnicamente e contribuir para a construção de soluções que gerem valor real para empresas e usuários.
+              <br />
+              <br />
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ const contactLinks = [
     label: "Email",
     value: "douglasteixeiramagalhaes@gmail.com",
     href: "mailto:douglasteixeiramagalhaes@gmail.com",
-    description: "Para propostas, freelas e oportunidades de trabalho.",
+    description: "Para processos seletivos, entrevistas e oportunidades em tecnologia.",
   },
   {
     icon: <FaLinkedin size={20} />,
@@ -45,18 +45,18 @@ const contactLinks = [
 const highlights = [
   {
     icon: Briefcase,
-    title: "Projetos sob medida",
-    text: "Landing pages, interfaces web e soluções full stack com foco em resultado.",
+    title: "Foco em software",
+    text: "Conhecimentos em front-end, back-end, APIs REST e bancos de dados para produtos digitais.",
   },
   {
     icon: MessageCircleMore,
-    title: "Comunicação direta",
-    text: "Alinhamento claro, andamento visível e decisões técnicas bem explicadas.",
+    title: "Trabalho em equipe",
+    text: "Comunicação clara, abertura a feedbacks e interesse em colaborar com diferentes áreas.",
   },
   {
     icon: Clock3,
-    title: "Retorno rápido",
-    text: "Respondo com agilidade para tirar a conversa do rascunho e levar para ação.",
+    title: "Aprendizado contínuo",
+    text: "Curiosidade técnica e compromisso em evoluir processos, código e produtos constantemente.",
   },
 ];
 
@@ -71,16 +71,16 @@ export default function Contact() {
           </div>
 
           <h1 className={styles.title}>
-            Vamos tirar sua
-            <span className={styles.titleAccent}> próxima ideia</span>
+            Vamos construir
+            <span className={styles.titleAccent}> bons produtos</span>
             <br />
-            do papel.
+            juntos.
           </h1>
 
           <p className={styles.description}>
-            Se você precisa de uma interface forte, uma aplicação bem estruturada
-            ou alguém para evoluir um produto com atenção aos detalhes, este é o
-            melhor ponto de partida.
+            Estou em busca de uma oportunidade em uma empresa de software para
+            contribuir com produtos digitais, aprender com profissionais experientes
+            e gerar impacto por meio da tecnologia.
           </p>
 
           <div className={styles.actions}>
@@ -105,7 +105,7 @@ export default function Contact() {
           <div className={styles.panel}>
             <div className={styles.panelHeader}>
               <span className={styles.panelKicker}>Canais de contato</span>
-              <h2 className={styles.panelTitle}>Escolha a forma que fizer mais sentido</h2>
+              <h2 className={styles.panelTitle}>Vamos conversar sobre oportunidades no seu time</h2>
             </div>
 
             <div className={styles.contactList}>
@@ -152,15 +152,15 @@ export default function Contact() {
             <div className={styles.sidebarCard}>
               <span className={styles.panelKicker}>Disponibilidade</span>
               <p className={styles.availabilityText}>
-                Aberto para oportunidades como desenvolvedor front-end, full
-                stack e projetos freelance com foco em experiência digital e
-                produto.
+                Disponível para oportunidades como desenvolvedor front-end,
+                back-end ou full stack, em equipes que valorizem colaboração,
+                qualidade de código e evolução profissional.
               </p>
               <a
-                href="mailto:douglasteixeiramagalhaes@gmail.com?subject=Vamos%20conversar"
+                href="mailto:douglasteixeiramagalhaes@gmail.com?subject=Oportunidade%20profissional"
                 className={styles.availabilityLink}
               >
-                Iniciar conversa
+                Entrar em contato
                 <ArrowUpRight size={18} />
               </a>
             </div>

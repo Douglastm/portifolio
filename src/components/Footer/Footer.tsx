@@ -38,7 +38,9 @@ export default function Footer() {
                             <h2>Douglas</h2>
                         </div>
                         <div className={styles.description}>
-                            <p>Possuo 4 anos de experiência em desenvolvimento de software e atuo há 1 ano e 3 meses como Analista de Suporte, adquirindo experiência em atendimento técnico, resolução de problemas, análise de sistemas e suporte ao usuário.</p>
+                            <p>
+                                Desenvolvedor Full Stack com experiência em Java, Spring Boot, APIs REST, React e TypeScript, além de conhecimentos em bancos de dados, integrações e resolução de problemas.
+                            </p>
                         </div>
                         <div className={styles.icons_container}>
                             <a href={socialLinks.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">

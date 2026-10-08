@@ -31,7 +31,7 @@ export default function Home() {
               />
               <TagInfo 
                 icon={Briefcase}
-                label="Analista de Suporte - TOTVS"
+                label="Desenvolvedor Full Stack"
               />
             </div>
             <div className={styles.text_presentation}>
@@ -44,7 +44,7 @@ export default function Home() {
               </h1>
             </div>
             <div>
-              <p className={styles.paragraph}>Desenvolvedor FullStack & Analista de suporte na TOTVS. Acadêmico na universidade UNIVEL.</p>
+              <p className={styles.paragraph}>Desenvolvedor FullStack & Analista de suporte. Acadêmico na universidade UNIVEL.</p>
             </div>
             <div className={styles.actions}>
               <a
